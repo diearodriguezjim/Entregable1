@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro Medicos</title>
+  </head>
+  <body>
+    <header>EPS BACKEND</header>
+    <main>
+      <h2>Registro Médicos</h2>
+      <form>
+        <label for="nombres">Nombres:</label><input type="text" id="nombres" name="nombres" required />
+        <label for="apellidos">Apellidos:</label><input type="text" id="apellidos" name="apellidos" required />
+        <label for="cedula">Cédula:</label><input type="number" id="cedula" name="cedula" required />
+        <label for="consultorio">Consultorio:</label><input type="number" id="consultorio" name="consultorio" required />
+        <label for="telefono">Teléfono:</label><input type="tel" id="telefono" name="telefono" required />
+        <label for="correo">Correo Electrónico:</label><input type="email" id="correo" name="correo" required />
+        <label for="especialidad">Especialidad:</label>
+        <select id="especialidad" name="especialidad" required>
+          <option value="">
+            ------------------------ Seleccione la especialidad---------------------
+          </option>
+          <option value="Medicina general">Medicina general</option>
+          <option value="Cardiología">Cardiología</option>
+          <option value="Medicina interna">Medicina interna</option>
+          <option value="Dermatología">Dermatología</option>
+          <option value="Rehabilitación física">Rehabilitación física</option>
+          <option value="Psicología">Psicología</option>
+          <option value="Odontología">Odontología</option>
+          <option value="Radiología">Radiología</option>
+        </select>
+        <input type="submit" value="Enviar">
+      </form>
+      <a href="../index.html">Volver</a>
+    </main>
+    <footer>
+        <h2>Realizado por:</h2>
+        <p>Diego Rodríguez</p>
+    </footer>
+  </body>
+</html>
