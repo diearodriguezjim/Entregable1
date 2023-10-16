@@ -3,47 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listado Pacientes</title>
+    <title>Listado medicos</title>
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
     <header>
-        <h1>EPS Backend</h1>
+        <h1>Centro medico Backend</h1>
     </header>
     <main>
-        <h2>Listado Pacientes</h2>
+        <h2>Listado medicos</h2>
         <table>
             <thead>
                 <tr>
                     <th>Nombres</th>
                     <th>Apellidos</th>
                     <th>Número de Cédula</th>
-                    <th>Edad</th>
+                    <th>Consultorio</th>
                     <th>Telefono</th>
+                    <th>Correo</th>
                     <th>Especialidad</th>
-                    <th>Médico</th>
+                    <th>Paciente</th>
                 </tr>
             </thead>
             <tbody id="cuerpo-tabla-medicos">
                 <!-- Se agrega el contenido dinamicamente por medio de JS -->
                 <tr>
-                    <td>José</td>
-                    <td>Martinez</td>
-                    <td>987456</td>
-                    <td>54</td>
-                    <td>34545697</td>
-                    <td>Medicina general</td>
                     <td>Liliana</td>
+                    <td>Herrera</td>
+                    <td>123456</td>
+                    <td>101</td>
+                    <td>32145697</td>
+                    <td>liliana@medico.com</td>
+                    <td>Medicina general</td>
+                    <td>José</td>
                 </tr>
             </tbody>
         </table>
-        <a href="../index.html">Volver</a>
+        <a href="../index.html"><input type="button" value="Volver"></a>
     </main>
     <footer>
         <h2>Realizado por:</h2>
-        <p>Diego Rodríguez</p>
+        <p>Grupo 1 desarrollo web backend</p>
     </footer>
-    
-
+    <script src="../app.js"></script>
 </body>
 </html>

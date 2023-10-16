@@ -5,11 +5,9 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
-    background-image: url(../img/fondoHospital.jpg);
 }
 
 header, footer {
-    
     background-color: #4CAF50;
     color: #fff;
     padding: 20px;
@@ -34,7 +32,6 @@ h2 {
 main {
     width: 100%;
     margin: auto;
-    background-image: none;
 }
 
 li{
@@ -44,7 +41,7 @@ li{
 }
 
 .container-form{
-    max-width: 100%;
+    max-width: 50%;
     margin: auto;
 }
 
