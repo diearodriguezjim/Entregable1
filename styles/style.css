@@ -5,16 +5,18 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    background-image: url(../img/fondo-hospital.avif);
+    background-size: cover;
 }
 
 header, footer {
-    background-color: #4CAF50;
-    color: #fff;
+
+    color: #1409bb;
     padding: 20px;
 }
 
 footer{
-    position: static;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
@@ -127,7 +129,7 @@ a{
     text-decoration: none;
 }
 .listado-servicios a {
-    color: #3e8e41;
+    color: #8e3e3e;
     font-size: 20px;
 }
 
