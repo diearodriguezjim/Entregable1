@@ -68,7 +68,7 @@ select {
 
 input[type="submit"],
 input[type="button"] {
-    background-color: #4CAF50;
+    background-color: #000e4d;
     color: white;
     border: none;
     border-radius: 4px;
@@ -100,8 +100,8 @@ th,
 td {
     padding: 10px;
     text-align: center;
-    border: 5px solid #4CAF50;
-    background-color: #4CAF50;
+    border: 5px solid #000000;
+    background-color: #564caf;
 
 
 }
