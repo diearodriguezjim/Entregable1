@@ -1,5 +1,6 @@
-//Obteniendo la información por medio del DOM y los IDs
+//Obteniendo la información por medio del DOM y los IDs. 
 //Campos compartidos entre pacientes y medicos
+// Se guardan los datos en común de los formularios a una variable en específico.
 const nombres = document.getElementById("nombres");
 const apellidos = document.getElementById("apellidos");
 const cedula = document.getElementById("cedula");
@@ -11,10 +12,10 @@ const correo = document.getElementById("correo");
 //Campos propios de los pacientes
 const edad = document.getElementById("edad");
 //Llamado de los formularios
-const formularioMedicos = document.getElementById("registro-medicos-form");
-const formularioPacientes = document.getElementById("registro-pacientes-form");
+const formularioMedicos = document.getElementById("registro-medicos-form"); // guarda informacion unicamente del formulario de médicos
+const formularioPacientes = document.getElementById("registro-pacientes-form"); // guarda informacion unicamente del formulario de pacientes
 
-class Usuario {
+class Usuario {  // se crea una clase. Una plantilla que permite crear objetos que comparten información 
   constructor(nombres, apellidos, cedula, telefono, especialidad) {
     this.nombres = nombres;
     this.apellidos = apellidos;
@@ -24,14 +25,14 @@ class Usuario {
   }
 }
 
-const mostrarMedicos = function () {
+const mostrarMedicos = function () {  // 
   let medicos = [];
   let cuerpoTabla = document.getElementById("cuerpo-tabla-medicos");
   let localMedicos = localStorage.getItem("medicos");
   if (localMedicos) {
-    medicos = JSON.parse(localMedicos);
+    medicos = JSON.parse(localMedicos);  // pasando de formato JSON a formato objeto
   }
-  medicos.forEach((medico) => {
+  medicos.forEach((medico) => {  // por cada medico que encuentre en el arreglo va a  agregar nueva fila    
     let fila = document.createElement("tr");
     //Para crear celda DOM tiene un metodo que es insertCell()
     let celdaNombres = fila.insertCell();
@@ -43,7 +44,7 @@ const mostrarMedicos = function () {
     let celdaEspecialidad = fila.insertCell();
     let celdaPaciente = fila.insertCell();
 
-    celdaNombres.textContent = medico.nombres;
+    celdaNombres.textContent = medico.nombres; // asignar contenido de texto
     celdaApellidos.textContent = medico.apellidos;
     celdaCedula.textContent = medico.cedula;
     celdaConsultorio.textContent = medico.consultorio;
@@ -100,9 +101,9 @@ if (window.location.href.endsWith("registro-medicos.html")) {
   //El evento para formularioMedicos va a ser de tipo enviar o guardar es decir submit
   formularioMedicos.addEventListener("submit", function (event) {
     //Previene que la pagina se recargue sin antes hacer la logica del addEventListener
-    event.preventDefault();
+    event.preventDefault(); // hace la logica antes de recargar y borrar 
 
-    let valorNombres = nombres.value;
+    let valorNombres = nombres.value; // Guarda el valor de cada casilla del formulario en registro médicos
     let valorApellidos = apellidos.value;
     let valorCedula = cedula.value;
     let valorConsultorio = consultorio.value;
@@ -110,7 +111,7 @@ if (window.location.href.endsWith("registro-medicos.html")) {
     let valorCorreo = correo.value;
     let valorEspecialidad = especialidad.value;
 
-    const medico = new Usuario(
+    const medico = new Usuario( // crea un nuevo objeto con los datos del formulario registro médicos
       valorNombres,
       valorApellidos,
       valorCedula,
@@ -118,15 +119,15 @@ if (window.location.href.endsWith("registro-medicos.html")) {
       valorEspecialidad
     );
 
-    medico.consultorio = valorConsultorio;
+    medico.consultorio = valorConsultorio; // crea nuevos elementos del nuevo objeto
     medico.correo = valorCorreo;
 
-    let medicos = [];
+    let medicos = []; //crear arreglo para guardar info de médicos
 
-    let localMedicos = localStorage.getItem("medicos");
+    let localMedicos = localStorage.getItem("medicos"); // 
     //Si localMeeicos no esta vacio lo convierte en objeto para hacer el push
-    if (localMedicos) {
-      medicos = JSON.parse(localMedicos);
+    if (localMedicos) { 
+      medicos = JSON.parse(localMedicos); 
     }
     medicos.push(medico);
     localStorage.setItem("medicos", JSON.stringify(medicos));
