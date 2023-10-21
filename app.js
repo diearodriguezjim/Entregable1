@@ -88,8 +88,8 @@ const mostrarPacientes = function () {
 };
 
 //Unicamente ejecuta la funcion cuando estamos ubicados en listado-medicos.html
-if (window.location.href.endsWith("listado-medicos.html")) {
-  mostrarMedicos();
+if (window.location.href.endsWith("listado-medicos.html")) { // determina la posición en la que se encuentra la ventana
+  mostrarMedicos(); // ejecutar solo si se encuentra en la pagina listado-medicos.html
 }
 
 if (window.location.href.endsWith("listado-pacientes.html")) {
