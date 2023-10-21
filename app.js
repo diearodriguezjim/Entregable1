@@ -25,7 +25,7 @@ class Usuario {  // se crea una clase. Una plantilla que permite crear objetos q
   }
 }
 
-const mostrarMedicos = function () {  // 
+const mostrarMedicos = function () {  // se usa para añadir la info del localstorage a la tabla listado medicos
   let medicos = [];
   let cuerpoTabla = document.getElementById("cuerpo-tabla-medicos");
   let localMedicos = localStorage.getItem("medicos");
