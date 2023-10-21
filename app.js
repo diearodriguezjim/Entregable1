@@ -162,7 +162,7 @@ if (window.location.href.endsWith("registro-pacientes.html")) { // si estamos ub
 
 
     // se pasa el arreglo en formato JSON para guardarlo en el local storage
-    let localPacientes = localStorage.getItem("pacientes");
+    let localPacientes = localStorage.getItem("pacientes"); 
     //Si localPacientes no esta vacio lo convierte en objeto para hacer el push
     if (localPacientes) {
       pacientes = JSON.parse(localPacientes);
@@ -170,6 +170,6 @@ if (window.location.href.endsWith("registro-pacientes.html")) { // si estamos ub
     pacientes.push(paciente);
     //Guardar la información de pacientes en el localStorage
     localStorage.setItem("pacientes", JSON.stringify(pacientes));
-    alert("Paciente registrado!");
+    alert("Paciente registrado!"); 
   });
 }
