@@ -136,20 +136,20 @@ if (window.location.href.endsWith("registro-medicos.html")) {
 }
 
 // Acceso al formulario registro pacientes
-if (window.location.href.endsWith("registro-pacientes.html")) {
+if (window.location.href.endsWith("registro-pacientes.html")) { // si estamos ubicados en registro-pacientes.html
   //El evento para formularioMedicos va a ser de tipo enviar o guardar es decir submit
-  formularioPacientes.addEventListener("submit", function (event) {
+  formularioPacientes.addEventListener("submit", function (event) { // cuando se le clic al boton enviar, se ejecuta la función
     //Previene que la pagina se recargue sin antes hacer la logica del addEventListener
     event.preventDefault();
 
-    let valorNombres = nombres.value;
+    let valorNombres = nombres.value; // Guardar los valores del formulario
     let valorApellidos = apellidos.value;
     let valorCedula = cedula.value;
     let valorEdad = edad.value;
     let valorTelefono = telefono.value;
     let valorEspecialidad = especialidad.value;
 
-    const paciente = new Usuario(
+    const paciente = new Usuario(  //se guardan los datos en el objeto paciente que instancia la clase usuario
       valorNombres,
       valorApellidos,
       valorCedula,
@@ -158,8 +158,10 @@ if (window.location.href.endsWith("registro-pacientes.html")) {
     );
     paciente.edad = valorEdad
 
-    let pacientes = [];
+    let pacientes = []; // se crea el arreglo pacientes para guardar los objetos creados
 
+
+    // se pasa el arreglo en formato JSON para guardarlo en el local storage
     let localPacientes = localStorage.getItem("pacientes");
     //Si localPacientes no esta vacio lo convierte en objeto para hacer el push
     if (localPacientes) {
