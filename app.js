@@ -21,7 +21,7 @@ class Usuario {  // se crea una clase. Una plantilla que permite crear objetos q
     this.apellidos = apellidos;
     this.cedula = cedula;
     this.telefono = telefono;
-    this.especialidad = especialidad;
+    this.especialidad = especialidad; 
   }
 }
 
@@ -49,7 +49,7 @@ const mostrarMedicos = function () {  //
     celdaCedula.textContent = medico.cedula;
     celdaConsultorio.textContent = medico.consultorio;
     celdaTelefono.textContent = medico.telefono;
-    celdaCorreo.textContent = medico.correo;
+    celdaCorreo.textContent = medico.correo; 
     celdaEspecialidad.textContent = medico.especialidad;
     celdaPaciente.textContent = "Sin asignar";
 
@@ -165,11 +165,11 @@ if (window.location.href.endsWith("registro-pacientes.html")) { // si estamos ub
     let localPacientes = localStorage.getItem("pacientes"); 
     //Si localPacientes no esta vacio lo convierte en objeto para hacer el push
     if (localPacientes) {
-      pacientes = JSON.parse(localPacientes);
+      pacientes = JSON.parse(localPacientes); 
     }
     pacientes.push(paciente);
     //Guardar la información de pacientes en el localStorage
-    localStorage.setItem("pacientes", JSON.stringify(pacientes));
+    localStorage.setItem("pacientes", JSON.stringify(pacientes)); 
     alert("Paciente registrado!"); 
   });
 }
