@@ -1,7 +1,7 @@
 //Obteniendo la información por medio del DOM y los IDs. 
 //Campos compartidos entre pacientes y medicos
 // Se guardan los datos en común de los formularios a una variable en específico.
-const nombres = document.getElementById("nombres");
+const nombres = document.getElementById("nombres");  // leer del documento en donde nos encontremos la info compartida  de los formularios y guardarlas en la const
 const apellidos = document.getElementById("apellidos");
 const cedula = document.getElementById("cedula");
 const telefono = document.getElementById("telefono");
@@ -126,11 +126,11 @@ if (window.location.href.endsWith("registro-medicos.html")) {
 
     let localMedicos = localStorage.getItem("medicos"); // 
     //Si localMeeicos no esta vacio lo convierte en objeto para hacer el push
-    if (localMedicos) { 
+    if (localMedicos) { //
       medicos = JSON.parse(localMedicos); 
     }
     medicos.push(medico);
-    localStorage.setItem("medicos", JSON.stringify(medicos));
+    localStorage.setItem("medicos", JSON.stringify(medicos)); // pasa a formato JSON
     alert("Medico registrado!");
   });
 }
